@@ -1,0 +1,19 @@
+services:
+
+  bot-guardian-1:
+    build:
+      context: ./guardian-1
+    container_name: bot-guardian-1
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      BOT_USERNAME: GuardianBot
+      # TARGET_PLAYER, MC_HOST, etc. vêm do .env
+    extra_hosts:
+      - "host.docker.internal:host-gateway"  # acesso ao localhost do Mac
+
+  # Adicionar novos bots aqui:
+  # bot-farmer-1:
+  #   build: ./farmer-1
+  #   container_name: bot-farmer-1
+  #   ...

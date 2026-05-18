@@ -1,0 +1,14 @@
+{
+  "name": "bot-guardian-1",
+  "version": "1.0.0",
+  "description": "Bot guardian que segue e protege um player no SkyFactory 4",
+  "main": "src/bot.js",
+  "scripts": {
+    "start": "node src/bot.js"
+  },
+  "dependencies": {
+    "mineflayer": "^4.23.0",
+    "mineflayer-pathfinder": "^2.4.5",
+    "minecraft-protocol-forge": "^1.0.0"
+  }
+}
